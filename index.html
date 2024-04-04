@@ -20,7 +20,8 @@
 
       img {
         width: 400px;
-        height: 400px;
+        height: 420px;
+        padding-top: 20px;
         padding-left: 50px;
       }
       .slider {
@@ -48,10 +49,10 @@
       .navigation-manual {
         position: absolute;
         width: 800px;
-        margin-top: -130px;
+        margin-top: -90px;
         display: flex;
         justify-content: center;
-        left: -100px;
+        left: -150px;
       }
 
       .manual-btn {
@@ -69,17 +70,49 @@
         background: rgb(196, 189, 189);
       }
 
-      #radio1:checked ⁓ .first {
+      #radio1:checked ~ .first {
         margin-left: 0;
       }
-      #radio2:checked ⁓ .first {
+      #radio2:checked ~ .first {
         margin-left: -20%;
       }
-      #radio3:checked ⁓ .first {
+      #radio3:checked ~ .first {
         margin-left: -40%;
       }
-      #radio4:checked ⁓ .first {
+      #radio4:checked ~ .first {
         margin-left: -60%;
+      }
+
+      .navigation-auto {
+        position: absolute;
+        width: 800px;
+        margin-top: 410px;
+        display: flex;
+        justify-content: center;
+        left: -150px;
+      }
+
+      .navigation-auto div {
+        border: 2px solid rgb(196, 189, 189);
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+      }
+      .navigation-auto div:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      #radio1:checked ~ .navigation-auto .auto-btn {
+        background: rgb(196, 189, 189);
+      }
+      #radio2:checked ~ .navigation-auto .auto-btn {
+        background: rgb(196, 189, 189);
+      }
+      #radio3:checked ~ .navigation-auto .auto-btn {
+        background: rgb(196, 189, 189);
+      }
+      #radio4:checked ~ .navigation-auto .auto-btn {
+        background: rgb(196, 189, 189);
       }
     </style>
   </head>
@@ -103,12 +136,12 @@
         </div>
         <div class="slide">
           <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/834/original/red_whip_shor_cardi.jpg?1712260416"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/870/original/gorg.jpg?1712269497"
           />
         </div>
         <div class="slide">
           <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/837/original/whip_shot_cardi.jpg?1712260899"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/865/original/cardi_potrait.jpg?1712268649"
           />
         </div>
 
@@ -127,5 +160,20 @@
         <label for="radio4" class="manual-btn"></label>
       </div>
     </div>
+
+    <a href="#"> Biography</a>
+    <a href="#">songs</a>
+    <a href="#">Awards</a>
+
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById(`radio` + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 5000);
+    </script>
   </body>
 </html>
