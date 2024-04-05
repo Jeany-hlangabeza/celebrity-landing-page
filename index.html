@@ -47,15 +47,19 @@
     footer {
       border: 1px solid black;
       background: black;
-      padding: 10px;
+      padding: 5px;
       margin-top: 150px;
     }
     .video-heading {
       color: rgb(202, 13, 13);
       font-size: 20px;
       margin-left: 80px;
+      margin-right: 130px;
       background: black;
       margin-top: -10px;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
       text-decoration: underline;
     }
     iframe {
@@ -84,8 +88,14 @@
   <body>
     <header>
       <nav class="links">
-        <a href="#">Biography</a>
-        <a href="#">Songs</a>
+        <a href="https://en.wikipedia.org/wiki/Cardi_B" target="_blank"
+          >Biography</a
+        >
+        <a
+          href="https://www.youtube.com/results?search_query=cardi+b+songs"
+          target="_blank"
+          >Songs</a
+        >
         <a href="#">Awards</a>
       </nav>
     </header>
@@ -104,7 +114,11 @@
       </div>
     </main>
     <footer>
-      <p class="video-heading">Funny moments</p>
+      <ul class="video-heading">
+        <li>Funny momemts</li>
+        <li>Biggest song</li>
+        <li>Lastest song</li>
+      </ul>
       <iframe
         width="350"
         height="300"
@@ -115,6 +129,29 @@
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
+
+      <iframe
+        width="350"
+        height="300"
+        src="https://www.youtube.com/embed/8_GoDl3kvsg?si=tEnA5dA4nTzzupxM"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+      <iframe
+        width="350"
+        height="300"
+        src="https://www.youtube.com/embed/SHnDwYgGKkY?si=GhBsItWo6qvvNGOD"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <p class="hit-song">Biggest song</p>
     </footer>
   </body>
 </html>
