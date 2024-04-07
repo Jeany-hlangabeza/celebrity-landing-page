@@ -8,6 +8,7 @@
       * {
         background: rgba(0, 0, 0, 0.91)
           url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/835/original/cardi_in_blue.jpg?1712260647");
+
         background-size: cover;
         background-blend-mode: darken;
       }
@@ -18,12 +19,6 @@
         padding: 15px;
         border-style: none;
       }
-      .container {
-        max-width: 50%;
-        text-align: center;
-        padding-top: 125px;
-        padding-left: 20px;
-      }
 
       h1 {
         color: white;
@@ -33,34 +28,128 @@
       .dropdown {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        background-color: black;
+        margin: 7px;
         z-index: 1;
+        text-align: center;
+        left: -40px;
+        padding: 5px;
       }
 
       .dropdown li {
         display: block;
+      }
+      .dropdown li a {
+        color: rgb(107, 68, 68);
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
       }
 
       .links li {
         position: relative;
         display: inline-block;
       }
+      .links a {
+        color: white;
+        font-size: 25px;
+
+        margin: 30px;
+        text-decoration: none;
+      }
 
       .links li:hover .dropdown {
         display: block;
       }
 
-      .details {
+      .dropdown a:hover {
         color: white;
-        font-size: 18px;
       }
+
+      img {
+        width: 410px;
+        height: 410px;
+        padding-top: 40px;
+        padding-left: 60px;
+      }
+      .slider {
+        width: 600px;
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .slides {
+        width: 500%;
+        height: 500px;
+        display: flex;
+      }
+
+      .slides input {
+        display: none;
+      }
+
+      .slide {
+        width: 20%;
+        transition: 2s;
+      }
+
+      .manual-btn:not(:last-child) {
+        margin-right: 30px;
+      }
+      .manual-btn:hover {
+        background: rgb(196, 189, 189);
+      }
+
+      #radio1:checked ~ .first {
+        margin-left: 0;
+      }
+      #radio2:checked ~ .first {
+        margin-left: -20%;
+      }
+      #radio3:checked ~ .first {
+        margin-left: -40%;
+      }
+      #radio4:checked ~ .first {
+        margin-left: -60%;
+      }
+
+      .navigation-auto div {
+        border: 2px solid rgb(196, 189, 189);
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+      }
+
+      .navigation-auto div:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      .container {
+        color: white;
+        position: absolute;
+        top: 180px;
+        text-align: center;
+        max-width: 45%;
+        left: 607px;
+        font-size: 18px;
+        border: 1px solid black;
+        background-color: black;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .slogan {
+        font-size: 25px;
+        font-style: italic;
+        font-weight: 500;
+      }
+
       footer {
+        position: absolute;
         border: 1px solid black;
         background: black;
         padding: 5px;
-        margin-top: 150px;
+        margin-top: 2px;
       }
       .video-heading {
         color: rgb(202, 13, 13);
@@ -75,6 +164,7 @@
         text-decoration: underline;
       }
       iframe {
+        margin: 45px;
         margin-top: -20px;
       }
 
@@ -85,10 +175,10 @@
         height: 3px;
         background: grey;
 
-        border-radius: 5px;
+        border-radius: 6px;
         left: 0;
         bottom: -6px;
-        transform-origin: right;
+        transform-origin: left;
         transform: scaleX(0);
         transition: transform 200ms;
       }
@@ -118,27 +208,83 @@
             <a href="#">Awards</a>
             <ul class="dropdown">
               <li>
-                <a href="#">Best Rap album</a>
-                <div>2019</div>
+                <a href="#"
+                  >Best Rap album
+                  <div>2019</div></a
+                >
               </li>
               <li>
-                <a href="#"> Album of the year</a>
-                <div>2019</div>
+                <a href="#">
+                  Album of the year
+                  <div>2019</div></a
+                >
               </li>
               <li>
-                <a href="#">Viewers choice</a>
-                <div>2018</div>
+                <a href="#"
+                  >Viewers choice
+                  <div>2018</div></a
+                >
               </li>
               <li>
-                <a href="#">Best collaboration</a>
-                <div>2021</div>
+                <a href="#"
+                  >Best collaboration
+                  <div>2021</div></a
+                >
               </li>
             </ul>
           </li>
         </ul>
       </nav>
+      <a
+        href="https://www.flaticon.com/free-icons/instagram-logo"
+        title="instagram logo icons"
+      ></a>
     </header>
     <main>
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+
+          <div class="slide first">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/835/original/cardi_in_blue.jpg?1712260647"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/836/original/cardi_best_pic.jpg?1712260704"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/870/original/gorg.jpg?1712269497"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/865/original/cardi_potrait.jpg?1712268649"
+            />
+          </div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </div>
+
       <div class="container">
         <h1>Cardi B</h1>
 
@@ -150,13 +296,14 @@
           Balancing these roles effortlessly, her journey serves as an
           inspiration to women everywhere.
         </p>
+        <p class="slogan">Ookrrrr....</p>
       </div>
     </main>
     <footer>
       <ul class="video-heading">
         <li>Funny momemts</li>
-        <li>Biggest song</li>
-        <li>Lastest song</li>
+        <li>Cardi B fashion</li>
+        <li>Lastest interview</li>
       </ul>
       <iframe
         width="350"
@@ -172,7 +319,7 @@
       <iframe
         width="350"
         height="300"
-        src="https://www.youtube.com/embed/8_GoDl3kvsg?si=tEnA5dA4nTzzupxM"
+        src="https://www.youtube.com/embed/1F2JBHR-X10?si=oT-hQmft-xreHRm9"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -183,16 +330,25 @@
       <iframe
         width="350"
         height="300"
-        src="https://www.youtube.com/embed/SHnDwYgGKkY?si=GhBsItWo6qvvNGOD"
+        src="https://www.youtube.com/embed/Mb2EzCbIA_8?si=ZuiRx2mk2nawrfGp"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
-      <p class="hit-song">Biggest song</p>
     </footer>
-    <script>
+
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById(`radio` + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 5000);
+
       document
         .querySelector(".dropdown-link")
         .addEventListener("mouseover", function () {
