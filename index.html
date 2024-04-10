@@ -6,7 +6,7 @@
     <title>Cardi B</title>
     <style>
       * {
-        background: rgba(0, 0, 0, 0.91)
+        background: rgba(0, 0, 0, 0.94)
           url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/835/original/cardi_in_blue.jpg?1712260647");
 
         background-size: cover;
@@ -145,27 +145,23 @@
       }
 
       footer {
-        position: absolute;
         border: 1px solid black;
         background: black;
-        padding: 5px;
-        margin-top: 2px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        flex: 3;
       }
-      .video-heading {
+      h5 {
         color: rgb(202, 13, 13);
         font-size: 20px;
-        margin-left: 80px;
-        margin-right: 130px;
         background: black;
         margin-top: -10px;
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
         text-decoration: underline;
+        margin-left: 80px;
       }
-      iframe {
-        margin: 45px;
-        margin-top: -20px;
+      .video-section {
+        margin: 20px 30px;
       }
 
       .links a::after {
@@ -300,43 +296,46 @@
       </div>
     </main>
     <footer>
-      <ul class="video-heading">
-        <li>Funny momemts</li>
-        <li>Cardi B fashion</li>
-        <li>Lastest interview</li>
-      </ul>
-      <iframe
-        width="350"
-        height="300"
-        src="https://www.youtube.com/embed/ItWRZDwPg1o?si=z87F4sDwfve6mdty"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-
-      <iframe
-        width="350"
-        height="300"
-        src="https://www.youtube.com/embed/1F2JBHR-X10?si=oT-hQmft-xreHRm9"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-
-      <iframe
-        width="350"
-        height="300"
-        src="https://www.youtube.com/embed/Mb2EzCbIA_8?si=ZuiRx2mk2nawrfGp"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+      <div class="video-section">
+        <h5 class="video-heading">Funny momemts</h5>
+        <iframe
+          width="350"
+          height="300"
+          src="https://www.youtube.com/embed/ItWRZDwPg1o?si=z87F4sDwfve6mdty"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="video-section">
+        <h5 class="video-heading">Cardi B fashion</h5>
+        <iframe
+          width="350"
+          height="300"
+          src="https://www.youtube.com/embed/1F2JBHR-X10?si=oT-hQmft-xreHRm9"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+      <div class="video-section">
+        <h5 class="video-heading">Lastest interview</h5>
+        <iframe
+          width="320"
+          height="300"
+          src="https://www.youtube.com/embed/Mb2EzCbIA_8?si=ZuiRx2mk2nawrfGp"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
     </footer>
 
     <script type="text/javascript">
